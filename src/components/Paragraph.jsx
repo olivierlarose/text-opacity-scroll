@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import React, { useRef } from 'react';
+import styles from './style.module.scss';
 
 export default function Paragraph({paragraph}) {
 
@@ -14,7 +15,7 @@ export default function Paragraph({paragraph}) {
   return (
     <motion.p 
       ref={container}         
-      className="flex flex-wrap text-6xl p-10 max-w-7xl text-white"
+      className={styles.paragraph}
       style={{opacity}}
     >
       {paragraph}

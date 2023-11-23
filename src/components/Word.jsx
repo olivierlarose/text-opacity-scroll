@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import React, { useRef } from 'react';
+import styles from './style.module.scss';
 
 export default function Paragraph({paragraph}) {
 
@@ -13,7 +14,7 @@ export default function Paragraph({paragraph}) {
   return (
     <p 
       ref={container}         
-      className="flex flex-wrap text-6xl p-10 max-w-7xl text-white"
+      className={styles.paragraph}
     >
     {
       words.map( (word, i) => {
@@ -28,8 +29,8 @@ export default function Paragraph({paragraph}) {
 
 const Word = ({children, progress, range}) => {
   const opacity = useTransform(progress, range, [0, 1])
-  return <span className='relative mr-3 mt-3'>
-    <span className='absolute opacity-10'>{children}</span>
+  return <span className={styles.word}>
+    <span className={styles.shadow}>{children}</span>
     <motion.span style={{opacity: opacity}}>{children}</motion.span>
   </span>
 }

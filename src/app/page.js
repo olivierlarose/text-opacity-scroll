@@ -10,13 +10,13 @@ export default function Home() {
   const words = paragraph.split(" ")
   return (
     <main>
-        <div className='h-[100vh]'></div>
+        <div style={{height: "100vh"}}></div>
         <Paragraph paragraph={paragraph}/>
-        <div className='h-[100vh]'></div>
+        <div style={{height: "100vh"}}></div>
         <Word paragraph={paragraph}/>
-        <div className='h-[100vh]'></div>
+        <div style={{height: "100vh"}}></div>
         <Character paragraph={paragraph} />
-        <div className='h-[100vh]'></div>
+        <div style={{height: "100vh"}}></div>
     </main>
   )
 }
